@@ -6,7 +6,14 @@ namespace Part_6__Random_Numbers
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            double valMin;
+            double valMax;
+
+            Random rnd = new Random();
+
+            double.TryParse(Console.ReadLine(), out valMin);
+            double.TryParse(Console.ReadLine(), out valMax);
+            double Number = rnd.Next(valMin, valMax);
         }
     }
 }
