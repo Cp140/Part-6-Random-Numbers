@@ -6,14 +6,29 @@ namespace Part_6__Random_Numbers
     {
         static void Main(string[] args)
         {
-            double valMin;
-            double valMax;
+            int valMin;
+            int valMax;
+            int loopCount;
 
+            loopCount = 25;
             Random rnd = new Random();
 
-            double.TryParse(Console.ReadLine(), out valMin);
-            double.TryParse(Console.ReadLine(), out valMax);
-            double Number = rnd.Next(valMin, valMax);
+            Console.WriteLine("This program generartes 25 random numbers with in a enter number range");
+            Console.WriteLine("     ----------      ");
+            Console.WriteLine("enter a minimum value");
+            int.TryParse(Console.ReadLine(), out valMin);
+            Console.WriteLine("Enter a Maximum number");
+            int.TryParse(Console.ReadLine(), out valMax);
+            Console.WriteLine("--------------------");
+            for (int i = 1; i <= loopCount; i++)
+            {
+
+                
+                double number = rnd.Next(valMin, valMax);
+                Console.WriteLine($"{number}");
+            }
+            Console.WriteLine("--------------------");
+
         }
     }
 }
